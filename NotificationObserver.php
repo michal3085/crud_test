@@ -1,9 +1,8 @@
 <?php
 class NotificationObserver {
     private $subscriptions = [];
-    private $file = 'subscriptions.json'; // Domyślny plik
+    private $file = 'subscriptions.json';
 
-    // Umożliwia ustawienie pliku testowego
     public function setFile($file) {
         $this->file = $file;
     }
@@ -23,7 +22,6 @@ class NotificationObserver {
     public function subscribe($person, $type) {
         $subscriptions = $this->loadSubscriptions();
 
-        // Sprawdź, czy subskrypcja już istnieje
         $exists = array_filter($subscriptions, function($sub) use ($person, $type) {
             return $sub['id'] === $person->id && $sub['type'] === $type;
         });
@@ -65,4 +63,3 @@ class NotificationObserver {
     }
 
 }
-?>
