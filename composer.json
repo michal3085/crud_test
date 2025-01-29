@@ -1,0 +1,19 @@
+{
+    "name": "michal/crud",
+    "description": "zadania",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Michal\\Crud\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michal Broszkiewicz",
+            "email": "michal3085@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    }
+}
