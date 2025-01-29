@@ -44,7 +44,7 @@ class NotificationObserver {
         $subscriptions = array_filter($subscriptions, function($sub) use ($person, $type) {
             return !($sub['id'] === $person->id && $sub['type'] === $type);
         });
-        $this->saveSubscriptions(array_values($subscriptions)); // Zresetuj klucze tablicy
+        $this->saveSubscriptions(array_values($subscriptions));
     }
 
     public function notify($message) {
